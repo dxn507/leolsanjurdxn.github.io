@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DXN_Changuinola</title>
+    <style>
+        html{background-color: black;}
+        body{margin: 0; padding: 0; margin-top: 0.5em; margin: auto; background-color: rgb(221, 229, 236); width: 500px; height: auto; text-align: center;}
+        .contenedor{width: 100%; height: 100%; margin: auto; box-sizing: border-box; 
+                    display: grid; grid-gap: 5px; 
+                    grid-template-columns: 1fr 1fr;
+                   
+                    /*
+                    grid-template-areas: "header"
+                                         "slider"
+                                          "nav"
+                                          "main" 
+                                          "side" 
+                                          "pie"; */
+
+                    justify-content: center;
+        }
+
+        header{width: 100%; height: auto; background-color: rgb(245, 237, 237); grid-area: 1 / 1 / 2/ 3;}/*grid-area: header;*/
+        header .cabecera{ width: 100%; height:auto;  display: flex; flex-direction: column; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;}
+        .logo{width: 25%;height: auto;}
+        .titulo{width: 30%; height: auto;}
+        .redes{height: 20px; width: 45%;} 
+        .redes img{width: 20px;transition: 0.5s; }
+        .redes img:hover{background-color: gold; border-radius: 50%; transform: scale(1.1);}      
+
+        .slider{width: 500px; Margin: auto;
+	            overflow: hidden; grid-area: 2 / 1 / 3/ 3; 
+    
+	 }
+     .slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite;
+}
+.slider img {
+	width: 100%; height: auto; margin-left: 0;
+}
+@keyframes cambio {
+	0% {margin-left:0;}
+	20% {margin-left:0;}
+	
+	25% {margin-left: -100%}
+	45% {margin-left: -100%}
+	
+	50% {margin-left: -200%}
+	70% {margin-left: -200%}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%}
+} 
+nav{background-color: #092327; width: 100%; height: 35px; grid-area: 3 / 1 / 4 / 3; justify-content: center; align-items: center; }
+.menu{
+    padding: 0px;
+    width: 100%;
+    margin: auto;
+	display: flex; justify-content: center; align-items: center;
+    
+}
+.menu a{font-size: 11px; word-spacing: 1px; letter-spacing: 1px;
+    text-decoration: none;
+    color: #e8e8e8;
+    padding: 11px;
+    display: block; transition: 0.5s;
+}
+.menu a:hover{font-weight: bold;
+    color: black;	
+    background: #f58a5c;
+   
+}
+main{width: 50%; height: auto;  justify-content: center; text-align: center;
+grid-area: 4/1/5/2; }
+main img{width: 100%; height: auto; margin: 15px;}
+aside{width: 50%; height: auto; grid-area: 4/2/5/3; text-align: center;}
+.pie{ background-color: gray; text-align: center;
+     grid-area: 5/1/6/3;}
+.pie .redes{margin: auto;}     
+
+     @media only screen and (min-width: 768px) {
+         body{width: 100%; height: auto;}
+        .contenedor{width: 100%;height: auto;}
+        header{ background-color: rgb(226, 220, 220); width: 100%; height: auto;
+                 }
+    
+       
+                            }
+    /* header .cabecera  {display: flex; flex-direction: row;justify-content: space-between; align-content: center;}
+     */
+      .slider{width: 100%; 
+	 }
+
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="cabecera">
+
+                <div class="logo"><img src="imagenes/logo-dxn.png" alt=""></div>
+                <div class="titulo">
+                    <h3>DXN Changuinola</h3>
+                    <p>"Un mundo un mercado"</p>
+                </div>
+                <div class="redes"> 
+                    <ul>
+                    <a href=""><img src="imagenes/bxl-facebook-circle.svg" alt=""></a>
+                    <a href=""><img src="imagenes/bxl-instagram.svg" alt=""></a>
+                    <a href=""><img src="imagenes/bxl-twitter.svg" alt=""></a>
+                    <a href=""><img src="imagenes/bxl-youtube.svg" alt=""></a>
+                    <a href=""><img src="imagenes/snapchat_icon.svg" alt=""></a>
+                    <a href=""><img src="imagenes/tiktok_icon.svg" alt=""></a>
+                    </ul> 
+                </div>
+
+            </div>
+        </header>
+    
+        <section class="slider">
+            <ul>
+            <img src="imagenes/1.jpg" alt="">
+            <img src="imagenes/2.jpg" alt="">
+            <img src="imagenes/3.jpg" alt="">
+            <img src="imagenes/4.jpg" alt=""> 
+            </ul> 
+        </section>
+        <nav>
+            <ul class="menu">
+                <a href="">INICIO</a>
+                <a href="">NOSOTROS</a>
+                <a href="">SERVICIOS</a>
+                <a href="">CONTACTO</a>
+                <a href="">GALERIA</a>
+            </ul>
+        </nav>
+        <main>
+            <img src="imagenes/20170714_235122.jpg" alt="">
+        </main>
+        <aside class="side">
+            <h4>Leonel Sanjur</h4>
+            <p>El lider Leonel es doble diamante.</p>
+            <p>Rumbo a Embajador Corona.</p>
+        </aside>
+        <footer class="pie">
+            <h4>Todos los derechos reservados.</h4>
+            <p>DXN Changuinola</p>
+            <div class="redes">
+                <a href=""><img src="imagenes/bxl-facebook-circle.svg" alt=""></a>
+                <a href=""><img src="imagenes/bxl-instagram.svg" alt=""></a>
+                <a href=""><img src="imagenes/bxl-twitter.svg" alt=""></a>
+                <a href=""><img src="imagenes/bxl-youtube.svg" alt=""></a>
+                <a href=""><img src="imagenes/snapchat_icon.svg" alt=""></a>
+                <a href=""><img src="imagenes/tiktok_icon.svg" alt=""></a> 
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>
